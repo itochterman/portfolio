@@ -9,7 +9,7 @@ class MemeGenerator extends Component {
             bottomText: "", 
             randomImage: "http://i.imgflip.com/1bij.jpg",
             allMemeImgs: [],
-            mouseDoesHover: false 
+            mouseDoesHover: true 
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -59,20 +59,11 @@ class MemeGenerator extends Component {
         this.setState({mouseDoesHover: false})
     }
 
-    handleHover(event){
-        this.setState({shouldHover: true})
-        console.log(true)
-    }
-
-    handleLeave(event){
-        this.setState({shouldHover: false})
-        console.log(false)
-    }
-
     
     render() {
         let doDisplay = true
         if(this.state.topText && this.state.bottomText){
+            console.log("FALSE")
             doDisplay = false;
         }
         return (
@@ -94,9 +85,9 @@ class MemeGenerator extends Component {
                     <button>Gen</button>
                 </form>
                 <div className = "meme" onMouseEnter = {this.handleHover} onMouseLeave = {this.handleLeave}>
-                    <img src = {this.state.randomImage} alt = "" onMouseEnter = {this.handleHover}
+                    <img src = {this.state.randomImage} alt = ""
                     />
-                    {this.state.mouseDoesHover && doDisplay &&<h2 className = "advice"> I recommend you type something!</h2>}
+                    {this.state.mouseDoesHover &&<h2 className = "advice"> I recommend you type something!</h2>}
                     <h2 className = "top"> {this.state.topText} </h2>
                     <h2 className = "bottom"> {this.state.bottomText} </h2>
                 </div>

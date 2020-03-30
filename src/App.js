@@ -1,7 +1,5 @@
 import React from 'react';
-import MemeGenerator from './MemeGenerator';
-import Header from './Header'
-import NavBar from './NavBar'
+import Poems from './Poems'
 import Home from './Home'
 import About from './About'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
