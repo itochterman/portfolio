@@ -1,8 +1,9 @@
 import React from "react"
+import  {arr} from "./images/index"
 function Header(props) {
     return (
         <header>
-            <img src="http://www.pngall.com/wp-content/uploads/2016/05/Trollface.png" />
+            <img src={arr[0]} />
             <p> 
                 {props.title}
             </p>
