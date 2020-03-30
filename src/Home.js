@@ -8,7 +8,7 @@ class Home extends React.Component {
     render(){
       return (   
         <div>
-            <Header />
+            <Header title = "Isabella Tochterman"/>
             <NavBar />
             <MemeGenerator /> 
         </div>
