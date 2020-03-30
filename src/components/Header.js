@@ -1,5 +1,5 @@
 import React from "react"
-import  {arr} from "./images/index"
+import  {arr} from "../images/index"
 function Header(props) {
     return (
         <header>

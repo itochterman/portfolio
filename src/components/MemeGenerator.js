@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {arr} from "./images"
+import {arr} from "../images"
 
 class MemeGenerator extends Component {
     constructor() {
