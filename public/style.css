@@ -90,6 +90,9 @@ header > p {
 .meme > .bottom {
     bottom: 0;
 }
+.meme > .advice { 
+    top: 75; 
+}
 
 .meme > .top {
     top: 0;

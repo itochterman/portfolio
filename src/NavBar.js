@@ -8,10 +8,13 @@ function NavBar() {
             </button>
             <button>
                 <Link to="/about">About </Link>
-
             </button>
             <button>
-                Poems
+                Tech
+            </button>
+            <button>
+                <Link to="/poems">Poems </Link>
+
             </button>
         </div>
     )
