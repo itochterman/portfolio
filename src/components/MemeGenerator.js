@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {arr} from "../images"
+import {arr, thought} from "../images"
 
 class MemeGenerator extends Component {
     constructor() {
@@ -87,7 +87,7 @@ class MemeGenerator extends Component {
                 <div className = "meme" onMouseEnter = {this.handleHover} onMouseLeave = {this.handleLeave}>
                     <img src = {this.state.randomImage} alt = ""
                     />
-                    {this.state.mouseDoesHover &&<h2 className = "advice"> I recommend you type something!</h2>}
+                    {this.state.mouseDoesHover && doDisplay &&<img className = "advice" src = {thought}/> }
                     <h2 className = "top"> {this.state.topText} </h2>
                     <h2 className = "bottom"> {this.state.bottomText} </h2>
                 </div>

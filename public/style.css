@@ -61,6 +61,9 @@ header > p {
 
 .meme > img {
     width: 100%;
+    border-radius: 10px;
+    /* position: absolute;  */
+
 }
 
 .meme > h2 {
@@ -92,14 +95,14 @@ header > p {
     bottom: 0;
 }
 
-.meme >.top {
+.meme > .top {
     top: 0;
 }
 .meme > .advice {
-    width: 25%;
-    background: white;
-    right: 0;
+    width: 15%;
+    position: absolute;
     top: 75; 
+    left: 85;
     font-size: 15px;
     color: red;
 }
@@ -110,6 +113,7 @@ header > p {
     display: flex;
     justify-content: space-between;
 }
+
 
 a {
     color: white; 
