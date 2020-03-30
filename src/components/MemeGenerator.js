@@ -88,6 +88,7 @@ class MemeGenerator extends Component {
                     <img src = {this.state.randomImage} alt = ""
                     />
                     {this.state.mouseDoesHover && doDisplay &&<img className = "advice" src = {thought}/> }
+                    {this.state.mouseDoesHover && doDisplay && <h2 className = "adviceText"> you should p enter some text</h2>}
                     <h2 className = "top"> {this.state.topText} </h2>
                     <h2 className = "bottom"> {this.state.bottomText} </h2>
                 </div>
