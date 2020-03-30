@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {arr} from './images/index'
+import {arr} from "./images"
 
 class MemeGenerator extends Component {
     constructor() {
@@ -9,24 +9,31 @@ class MemeGenerator extends Component {
             bottomText: "", 
             randomImage: "http://i.imgflip.com/1bij.jpg",
             allMemeImgs: [],
-            shouldHover: false 
+            mouseDoesHover: false 
         }
 
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleHover = this.handleHover.bind(this)
         this.handleLeave = this.handleLeave.bind(this)
+
     }
 
     componentDidMount() {
-        // fetch("https://api.imgflip.com/get_memes")
-        //     .then(response => response.json())
-        //     .then(response => {
-        //         const {memes} = response.data
-        //         this.setState({ allMemeImgs: memes })
-        //     })
+        fetch("https://api.imgflip.com/get_memes")
+            .then(response => response.json())
+            .then(response => {
+                const {memes} = response.data
+                const capacity = Math.floor(memes.length/6);
+                console.log(capacity)
+                let temp = []
+                for(let i = 1; i<7; i++){
+                   temp.push(arr[i-1])
+                }
+                // this.setState({ allMemeImgs: memes })
+                this.setState({ allMemeImgs: temp })
 
-        this.setState({allMemeImgs: arr})
+            })
     }
 
 
@@ -38,12 +45,18 @@ class MemeGenerator extends Component {
     }
     handleSubmit(event){
         event.preventDefault()
-        const memes = this.state.allMemeImgs
-        const randomNumber = Math.floor((Math.random())*memes.length)
-        const targetMeme = memes[randomNumber]
-        console.log(targetMeme)
+        const us = this.state.allMemeImgs
+        const randomNumber = Math.floor((Math.random())*us.length)
+        const targetMeme = us[randomNumber]
+        console.log(randomNumber)
         this.setState({randomImage: targetMeme})
 
+    }
+    handleHover(event){
+        this.setState({mouseDoesHover: true})
+    }
+    handleLeave(event){
+        this.setState({mouseDoesHover: false})
     }
 
     handleHover(event){
@@ -58,7 +71,10 @@ class MemeGenerator extends Component {
 
     
     render() {
-
+        let doDisplay = true
+        if(this.state.topText && this.state.bottomText){
+            doDisplay = false;
+        }
         return (
             <div>
                 <form className="meme-form" onSubmit = {this.handleSubmit}>
@@ -78,11 +94,9 @@ class MemeGenerator extends Component {
                     <button>Gen</button>
                 </form>
                 <div className = "meme" onMouseEnter = {this.handleHover} onMouseLeave = {this.handleLeave}>
-
-                    <img src = {this.state.randomImage} alt = ""/>
-                    {this.state.shouldHover && (this.state.filledOut && this.state.topText) && <div className = "advice">
-                        I think you should fill it out...
-                    </div>}
+                    <img src = {this.state.randomImage} alt = "" onMouseEnter = {this.handleHover}
+                    />
+                    {this.state.mouseDoesHover && doDisplay &&<h2 className = "advice"> I recommend you type something!</h2>}
                     <h2 className = "top"> {this.state.topText} </h2>
                     <h2 className = "bottom"> {this.state.bottomText} </h2>
                 </div>
