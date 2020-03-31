@@ -37,11 +37,8 @@ class Poems extends React.Component {
         return response.data
       })
       this.setState(
-      {all: data, isLoading: false}) 
-           
+      {all: data, isLoading: false})        
   }
-      
-       
   render(){
     const sendProps = !this.state.isLoading
     return (
@@ -49,6 +46,7 @@ class Poems extends React.Component {
           <Header title = "Poems"/>
           <NavBar />
           <ChildPoems poems = {this.state.all} isLoading = {this.state.isLoading}/>
+
       </div>
     )
     }

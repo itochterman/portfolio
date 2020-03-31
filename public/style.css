@@ -191,3 +191,9 @@ a {
 .poemTextContainer >.poemText{
     padding: 20px;
 }
+.header > .rose { 
+    display: absolute;
+    height: 80%;
+    border-radius: 50px;
+    margin-right: 10%;
+}
