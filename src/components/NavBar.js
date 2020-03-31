@@ -10,7 +10,7 @@ function NavBar() {
                 <Link to="/about">About </Link>
             </button>
             <button>
-                Tech
+                <Link to="/tech">Tech </Link>
             </button>
             <button>
                 <Link to="/poems">Poems </Link>

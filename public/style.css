@@ -11,14 +11,14 @@ header {
     height: 100px;
     display: flex;
     align-items: center;
-    background: rgb(122, 165, 65);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2a0845, rgb(143, 165, 65));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #124508, rgb(68, 165, 65)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(28, 29, 27);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4f4e50, rgb(10, 10, 10));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3b3b3b, rgb(3, 3, 3)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .Bar { 
     font-size: 20px;
-    background-color: green;
+    background-color: black;
     padding-right: 50px;
     margin: auto;
     text-align: right;
@@ -61,6 +61,9 @@ header > p {
 
 .meme > img {
     width: 100%;
+    border-radius: 10px;
+    /* position: absolute;  */
+
 }
 
 .meme > h2 {
@@ -92,16 +95,26 @@ header > p {
     bottom: 0;
 }
 
-.meme >.top {
+.meme > .top {
     top: 0;
 }
 .meme > .advice {
-    width: 25%;
-    background: white;
-    right: 0;
-    top: 75; 
-    font-size: 15px;
+    width: 35%;
+    position: absolute;
+    top: 50; 
+    left: 85;
     color: red;
+}
+.meme > .adviceText{
+    font-size: 15px;
+    position: absolute;
+    text-shadow: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    width: 15%;
+    color: rgb(0, 0, 0);
+    top: 125; 
+    left: 275;; 
 }
 
 .meme-form {
@@ -109,6 +122,12 @@ header > p {
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
+}
+
+
+a {
+    color: white; 
+    text-decoration: none;
 }
 
 .meme-form > input {
@@ -145,4 +164,30 @@ header > p {
   font-family: VT323, monospace;
   font-size: 12px;
   text-align: cen
+}
+.poemContainer{
+    display: absolute; 
+    text-align: center;
+    margin:auto;
+    width: 300px;
+    max-height: 20px;
+    border-radius: 2%;
+
+}
+.poemContainer > .div1{
+    text-align: center;
+    font-size: large;
+    color: white;
+    margin: auto;
+}
+.poemTextContainer {
+    top: 20px;
+    width: 300px;
+    height: 500px;
+    display: flex; 
+    border-radius: 2%;
+    background-color: grey;
+  }
+.poemTextContainer >.poemText{
+    padding: 20px;
 }
