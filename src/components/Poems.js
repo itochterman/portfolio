@@ -16,13 +16,31 @@ class Poems extends React.Component {
         description: "",
         published: false
       }],
-      isLoading: true
-
+      isLoading: true,
+      currPoem: ""
     }
   } 
   async componentWillMount(){
     await this.displayPoems();  
+    this.readTextFile("./poems/raw_gums.txt");
   }
+  readTextFile = file => {
+    console.log('here')
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = () => {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                var allText = rawFile.responseText;
+                console.log("allText: ", allText);
+                this.setState({
+                    currPoem: allText
+                });
+            }
+        }
+    };
+    rawFile.send(null);
+};
 
   addPoem(){
 
@@ -45,7 +63,7 @@ class Poems extends React.Component {
       <div>
           <Header title = "Poems"/>
           <NavBar />
-          <ChildPoems poems = {this.state.all} isLoading = {this.state.isLoading}/>
+          <ChildPoems current = {this.state.currPoem} poems = {this.state.all} isLoading = {this.state.isLoading}/>
 
       </div>
     )

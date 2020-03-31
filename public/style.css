@@ -172,24 +172,24 @@ a {
 .poemContainer{
     display: absolute; 
     text-align: center;
-    margin:auto;
     width: 300px;
-    max-height: 20px;
-    border-radius: 2%;
+    margin-left:30%;
+    /* max-height: 20px;
+    border-radius: 2%; */
 
 }
 .poemContainer > .div1{
     text-align: center;
     font-size: large;
     color: white;
-    margin: auto;
+    margin-left: 55%;
 }
-.poemTextContainer {
-    top: 20px;
-    width: 300px;
-    height: 500px;
-    display: flex; 
-    border-radius: 2%;
+.poemContainer > .poemTextContainer {
+    display: flex;
+    width: 500px;
+    height: 2000px;
+    overflow: scroll;
+    text-align: left;
     background-color: grey;
   }
 .poemTextContainer >.poemText{
