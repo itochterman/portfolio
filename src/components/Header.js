@@ -5,11 +5,12 @@ import Rose from '../images/assets/rose.png'
 function Header(props) {
     return (
         <header>
-            <img src={arr[0]} />
+            <img className = 'logo' src={arr[0]} />
             <p> 
                 {props.title}
             </p>
-            <img className = "rose" src = {Rose}/>
+            <img src = {Rose}/>
+      
 
         </header>
     )
