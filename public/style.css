@@ -170,9 +170,9 @@ a {
   text-align: cen
 }
 .poemContainer{
-    display: absolute; 
-    text-align: center;
-    width: 300px;
+    /* display: absolute;  */
+    text-align: right;
+    width: 500px;
     margin-left:30%;
     /* max-height: 20px;
     border-radius: 2%; */
@@ -180,9 +180,11 @@ a {
 }
 .poemContainer > .div1{
     text-align: center;
-    font-size: large;
-    color: white;
-    margin-left: 55%;
+    font-family: VT323, monospace;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgb(182, 180, 180);
+    color:black;
 }
 .poemContainer > .poemTextContainer {
     display: flex;
@@ -190,7 +192,7 @@ a {
     height: 2000px;
     overflow: scroll;
     text-align: left;
-    background-color: grey;
+    background-color: white;
   }
 .poemTextContainer >.poemText{
     padding: 20px;

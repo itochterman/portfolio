@@ -17,24 +17,37 @@ class Poems extends React.Component {
         published: false
       }],
       isLoading: true,
-      currPoem: ""
+      currPoem: []
     }
   } 
   async componentWillMount(){
-    await this.displayPoems();  
+    // await this.displayPoems();  
     this.readTextFile("./poems/raw_gums.txt");
+    if(this.state.currPoem){
+      console.log("YES: ", this.state.currPoem)
+      this.setState({isLoading: false})
+    }
   }
-  readTextFile = file => {
-    console.log('here')
+    readTextFile = file => {
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = () => {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
-                var allText = rawFile.responseText;
-                console.log("allText: ", allText);
+                let allText = rawFile.responseText;
+                for (let i = 0; i < allText.length; i++) {
+                  let uni = allText.charCodeAt(i)
+                  if (uni === 13) {
+                    allText =(allText.substring(0, i) + "~" + allText.substring(i + 1, allText.length - 1))
+                  }
+                }
+                let newText = allText.split("~")
+                console.log(newText)
+
+
+                
                 this.setState({
-                    currPoem: allText
+                    currPoem: newText
                 });
             }
         }
@@ -49,14 +62,14 @@ class Poems extends React.Component {
       description: this.state.description
       })
   }
-  async displayPoems(){
+  // async displayPoems(){
 
-      const data = await PoemDataService.getAll().then((response) => {
-        return response.data
-      })
-      this.setState(
-      {all: data, isLoading: false})        
-  }
+  //     const data = await PoemDataService.getAll().then((response) => {
+  //       return response.data
+  //     })
+  //     this.setState(
+  //     {all: data, isLoading: false})      
+  // }
   render(){
     const sendProps = !this.state.isLoading
     return (

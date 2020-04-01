@@ -13,7 +13,7 @@ function NavBar() {
                 <Link to="/tech">Tech </Link>
             </button>
             <button>
-                <Link to="/poems">Poems </Link>
+                <Link to="/mypoems">Poems </Link>
 
             </button>
         </div>
