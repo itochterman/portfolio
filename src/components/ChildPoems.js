@@ -33,7 +33,7 @@ class ChildPoems extends Component {
                 <br></br>
                 <div className = 'poemContainer'>
                     <div className = 'div1'>
-                        {!isLoading && [this.state.title]}
+                        {!isLoading && this.state.title}
                     </div>
                 <br></br>
                 <div className = 'poemTextContainer'>
