@@ -19,7 +19,8 @@ class Poems extends React.Component {
       counter: 0,
       currPoem: []
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleForward = this.handleForward.bind(this);
+    this.handleBackward = this.hadnleBackward.bind(this);
   }
   async componentWillMount() {
     const all = await this.displayPoems();
@@ -89,7 +90,7 @@ class Poems extends React.Component {
     return data;
   }
 
-  handleClick() {
+  handleForward() {
     if (
       this.state.counter + 1 < this.state.all.length &&
       !this.state.isLoading
@@ -102,6 +103,16 @@ class Poems extends React.Component {
       });
     }
   }
+  hadnleBackward() {
+    if (this.state.counter - 1 >= 0 && !this.state.isLoading) {
+      this.setState(prev => {
+        return {
+          currPoem: this.state.all[prev.counter - 1],
+          counter: prev.counter - 1
+        };
+      });
+    }
+  }
   render() {
     const sendProps = this.state.isLoading;
     console.log(this.state.currPoem);
@@ -109,7 +120,15 @@ class Poems extends React.Component {
       <div>
         <Header title="Poems" />
         <NavBar />
-        <button onClick={this.handleClick}>Next</button>
+        <div style={{ textAlign: "center", paddingTop: "10px" }}>
+          <button className="backButton" onClick={this.handleBackward}>
+            Back
+          </button>
+          <button className="backButton" onClick={this.handleForward}>
+            Next
+          </button>
+        </div>
+
         {!sendProps && <ChildPoems current={this.state.currPoem} />}
       </div>
     );
