@@ -1,85 +1,118 @@
-import React from 'react'
-import NavBar from './NavBar'
-import Header from './Header'
-import ChildPoems from './ChildPoems'
-import PoemDataService from '../services/poem.service'
+import React from "react";
+import NavBar from "./NavBar";
+import Header from "./Header";
+import ChildPoems from "./ChildPoems";
+import PoemDataService from "../services/poem.service";
 
-
-class Poems extends React.Component { 
-  constructor(){
-    super()
+class Poems extends React.Component {
+  constructor() {
+    super();
     this.state = {
-    
-      all :  [{
-        id: "",
-        title: "",
-        description: "",
-        published: false
-      }],
-      isLoading: true,
-      currPoem: []
-    }
-  } 
-  async componentWillMount(){
-    // await this.displayPoems();  
-    this.readTextFile("./poems/raw_gums.txt");
-    if(this.state.currPoem){
-      console.log("YES: ", this.state.currPoem)
-      this.setState({isLoading: false})
-    }
-  }
-    readTextFile = file => {
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = () => {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                let allText = rawFile.responseText;
-                for (let i = 0; i < allText.length; i++) {
-                  let uni = allText.charCodeAt(i)
-                  if (uni === 13) {
-                    allText =(allText.substring(0, i) + "~" + allText.substring(i + 1, allText.length - 1))
-                  }
-                }
-                let newText = allText.split("~")
-                console.log(newText)
-
-
-                
-                this.setState({
-                    currPoem: newText
-                });
-            }
+      all: [
+        {
+          id: "",
+          title: "",
+          description: ""
         }
+      ],
+      isLoading: true,
+      counter: 0,
+      currPoem: []
     };
-    rawFile.send(null);
-};
-
-  addPoem(){
-
-    PoemDataService.create({
-      title: this.state.title,
-      description: this.state.description
-      })
+    this.handleClick = this.handleClick.bind(this);
   }
-  // async displayPoems(){
+  async componentWillMount() {
+    const all = await this.displayPoems();
+    // console.log("STATE:", this.state.all[this.state.counter]);
+    // const link = this.state.all[this.state.counter].description;
+    // this.readTextFile(link);
+    // const state = this.readTextFile(all);
+    this.setState({ all: this.readTextFile(all) });
+    if (this.state.all) {
+      this.setState({
+        currPoem: this.state.all[this.state.counter],
+        isLoading: false
+      });
+      console.log(this.state.all);
+    }
+  }
+  readTextFile = all => {
+    const rval = [];
+    for (let p = 0; p < all.length; p++) {
+      const file = all[p].description;
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = () => {
+        if (rawFile.readyState === 4) {
+          if (rawFile.status === 200 || rawFile.status == 0) {
+            let allText = rawFile.responseText;
+            for (let i = 0; i < allText.length; i++) {
+              let uni = allText.charCodeAt(i);
+              if (uni === 13) {
+                allText =
+                  allText.substring(0, i + 1) +
+                  "~" +
+                  allText.substring(i + 1, allText.length);
+              }
+            }
+            let newText = allText.split("~");
+            console.log("text: ", newText);
+            rval.push(newText);
 
-  //     const data = await PoemDataService.getAll().then((response) => {
-  //       return response.data
-  //     })
-  //     this.setState(
-  //     {all: data, isLoading: false})      
+            // this.setState({
+            //   currPoem: newText
+            // });
+          }
+        }
+      };
+      rawFile.send(null);
+    }
+    // this.setState({ all: rval, isLoading: false });
+    console.log("ALL", rval);
+    return rval;
+  };
+
+  // async addPoem(data) {
+  //   const { title, description } = data;
+  //   const resp = await PoemDataService.create({
+  //     title: title,
+  //     description: description
+  //   });
+  //   console.log(resp);
   // }
-  render(){
-    const sendProps = !this.state.isLoading
+
+  async displayPoems() {
+    const data = await PoemDataService.getAll().then(response => {
+      return response.data;
+    });
+    // this.setState({ all: data });
+    return data;
+  }
+
+  handleClick() {
+    if (
+      this.state.counter + 1 < this.state.all.length &&
+      !this.state.isLoading
+    ) {
+      this.setState(prev => {
+        return {
+          currPoem: this.state.all[prev.counter + 1],
+          counter: prev.counter + 1
+        };
+      });
+    }
+  }
+  render() {
+    const sendProps = this.state.isLoading;
+    console.log(this.state.currPoem);
     return (
       <div>
-          <Header title = "Poems"/>
-          <NavBar />
-          <ChildPoems current = {this.state.currPoem} poems = {this.state.all} isLoading = {this.state.isLoading}/>
-
+        <Header title="Poems" />
+        <NavBar />
+        <button onClick={this.handleClick}>Next</button>
+        {!sendProps && <ChildPoems current={this.state.currPoem} />}
       </div>
-    )
-    }
+    );
   }
-  export default Poems 
+}
+export default Poems;
