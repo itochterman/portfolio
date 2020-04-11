@@ -119,7 +119,6 @@ class Poems extends React.Component {
     return (
       <div>
         <Header title="Poems" />
-        <NavBar />
         <div style={{ textAlign: "center", padding: "10px" }}>
           <button className="backButton" onClick={this.handleBackward}>
             Back

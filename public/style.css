@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: rgb(231, 244, 250);
 }
 
 header {
@@ -20,8 +20,8 @@ header {
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #f37676,
-    rgb(75, 3, 3)
+    rgb(30, 45, 53),
+    rgb(7, 14, 24)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 @keyframes slideInFromLeft {
@@ -50,7 +50,8 @@ header {
   /* margin: auto;
   text-align: right; */
 }
-.navButton {
+.Bar > .navButton {
+  position: abso;
   height: 40px;
   width: 70px;
   background-color: grey;
@@ -76,6 +77,8 @@ header {
   font-family: VT323, monospace;
   letter-spacing: 1.5px;
   margin-top: 20;
+  margin-right: 5px;
+  margin-left: 3px;
 }
 
 header > .logo {

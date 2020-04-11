@@ -13,7 +13,7 @@ function NavBar(props) {
       <button className="navButton">
         <Link to="/tech">Tech </Link>
       </button>
-      <button className = "navButton">
+      <button className="navButton">
         <Link to="/mypoems">Poems </Link>
       </button>
     </div>
