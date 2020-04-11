@@ -7,12 +7,22 @@ import network from "../images/assets/network.jpeg";
 
 class Home extends React.Component {
   render() {
+    const arrow = "\u279C";
     return (
       <div>
-        <NavBar />
+        {/* <div className="arrow">{arrow}</div> */}
 
+        <NavBar />
         <img className="home" src={network} />
-        <div className="title">Hi, I'm Isabella Tochterman.</div>
+
+        <div className="title">Hi, I'm Isabella Tochterman</div>
+        <div
+          className="title"
+          style={{ top: "50%", fontSize: "25px", color: "red" }}
+        >
+          I'm an aspiring web developer
+        </div>
+
         {/* <MemeGenerator /> */}
         <SocialMedia />
       </div>

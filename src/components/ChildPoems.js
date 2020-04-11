@@ -21,7 +21,7 @@ class ChildPoems extends Component {
           <br></br>
           <div className="poemTextContainer">
             <div className="poemText">
-              {body.map(text => (
+              {body.map((text) => (
                 <div key={text}>{text != "\n" ? text : <br />}</div>
               ))}{" "}
               <br></br>

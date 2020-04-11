@@ -12,12 +12,12 @@ class Poems extends React.Component {
         {
           id: "",
           title: "",
-          description: ""
-        }
+          description: "",
+        },
       ],
       isLoading: true,
       counter: 0,
-      currPoem: []
+      currPoem: [],
     };
     this.handleForward = this.handleForward.bind(this);
     this.handleBackward = this.hadnleBackward.bind(this);
@@ -32,12 +32,12 @@ class Poems extends React.Component {
     if (this.state.all) {
       this.setState({
         currPoem: this.state.all[this.state.counter],
-        isLoading: false
+        isLoading: false,
       });
       console.log(this.state.all);
     }
   }
-  readTextFile = all => {
+  readTextFile = (all) => {
     const rval = [];
     for (let p = 0; p < all.length; p++) {
       const file = all[p].description;
@@ -83,7 +83,7 @@ class Poems extends React.Component {
   // }
 
   async displayPoems() {
-    const data = await PoemDataService.getAll().then(response => {
+    const data = await PoemDataService.getAll().then((response) => {
       return response.data;
     });
     // this.setState({ all: data });
@@ -95,20 +95,20 @@ class Poems extends React.Component {
       this.state.counter + 1 < this.state.all.length &&
       !this.state.isLoading
     ) {
-      this.setState(prev => {
+      this.setState((prev) => {
         return {
           currPoem: this.state.all[prev.counter + 1],
-          counter: prev.counter + 1
+          counter: prev.counter + 1,
         };
       });
     }
   }
   hadnleBackward() {
     if (this.state.counter - 1 >= 0 && !this.state.isLoading) {
-      this.setState(prev => {
+      this.setState((prev) => {
         return {
           currPoem: this.state.all[prev.counter - 1],
-          counter: prev.counter - 1
+          counter: prev.counter - 1,
         };
       });
     }
@@ -120,7 +120,7 @@ class Poems extends React.Component {
       <div>
         <Header title="Poems" />
         <NavBar />
-        <div style={{ textAlign: "center", paddingTop: "10px" }}>
+        <div style={{ textAlign: "center", padding: "10px" }}>
           <button className="backButton" onClick={this.handleBackward}>
             Back
           </button>
