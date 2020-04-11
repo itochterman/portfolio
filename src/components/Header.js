@@ -6,9 +6,9 @@ function Header(props) {
   return (
     <div>
       <header>
-        <img className="logo" src={arr[0]} />
+        {/* <img className="logo" src={arr[0]} /> */}
         <p>{props.title}</p>
-        <img src={Rose} />
+        <img className="Rose" src={Rose} />
       </header>
     </div>
   );

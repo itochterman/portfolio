@@ -8,8 +8,9 @@ body {
 }
 
 header {
-  height: 100px;
+  height: 75px;
   display: flex;
+  justify-content: center;
   align-items: center;
   background: rgb(28, 29, 27); /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -54,16 +55,19 @@ header {
 header > .logo {
   height: 80%;
   border-radius: 6px;
-  margin-left: 10%;
+  margin-left: 50%;
 }
 
 header > p {
   font-family: VT323, monospace;
   color: whitesmoke;
   font-size: 50px;
-  margin-left: 30px;
 }
-header > img {
+/* header > img {
+  height: 50px;
+  border-radius: 6px;
+} */
+header > .Rose {
   height: 50px;
   border-radius: 6px;
 }
