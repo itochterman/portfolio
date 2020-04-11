@@ -59,7 +59,7 @@ header > .logo {
 }
 
 header > p {
-  font-family: VT323, monospace;
+  font-family: cursive, monospace;
   color: whitesmoke;
   font-size: 50px;
 }
@@ -73,7 +73,7 @@ header > .Rose {
 }
 
 .navBar {
-  font-family: VT323, monospace;
+  font-family: cursive, monospace;
   color: whitesmoke;
 }
 
@@ -208,6 +208,28 @@ a {
 .poemTextContainer > .poemText {
   padding: 20px;
 }
-.header > .rose {
-  padding-left: "500px";
+.social-container {
+  display: flex;
+  justify-content: center;
+  background: #eee;
+  padding: 25px 50px;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: rgb(157, 17, 238);
 }
