@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function NavBar() {
+function NavBar(props) {
+  console.log(props);
   return (
-    <div className="Bar">
-      <button>
+    <div className=" Bar">
+      <button className="navButton">
         <Link to="/">Home </Link>
       </button>
-      <button>
+      <button className="navButton">
         <Link to="/about">About </Link>
       </button>
-      <button>
+      <button className="navButton">
         <Link to="/tech">Tech </Link>
       </button>
-      <button>
+      <button className = "navButton">
         <Link to="/mypoems">Poems </Link>
       </button>
     </div>
