@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  height: 75px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +133,9 @@ a {
 
 .poemContainer {
   display: absolute;
-  /* text-align: right; */
+  padding: 20px;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -147,16 +149,10 @@ a {
   color: black;
 }
 .poemContainer > .poemTextContainer {
-  /* display: flex;
-  width: 500px; */
   height: 100%;
   border: none;
   overflow: scroll;
   text-align: left;
-  /* background-color: white; */
-}
-.poemTextContainer > .poemText {
-  padding: 20px;
 }
 .social-container {
   display: flex;
@@ -191,24 +187,30 @@ a.instagram {
 }
 
 .columnImage {
-  margin: 0;
-  /* display: flex; */
-  object-fit: contain;
-  width: 90%;
-}
-.aboutHeader {
-  text-align: center;
-  background-color: rgb(160, 159, 159);
-  margin: 5px;
+  border-radius: 2%;
+  margin-left: 25%;
+  margin-top: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50%;
+  height: auto;
 }
 .column {
-  padding-top: 30px;
-  float: left;
-  border-style: double;
-  width: 33.33%;
+  float: right;
+  width: 50%;
 }
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.aboutContainer {
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 3%;
+  margin-left: 25%;
+  border-radius: 2%;
+  background-color: white;
+  text-align: center;
+  width: 100%;
 }
