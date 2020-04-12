@@ -50,24 +50,24 @@ header {
   /* margin: auto;
   text-align: right; */
 }
-.Bar > .navButton {
-  position: abso;
-  height: 40px;
-  width: 70px;
+.navButton {
+  /* height: 35px;
+  width: 80px;
   background-color: grey;
   color: white;
   border-radius: 6px;
   font-family: VT323, monospace;
-  letter-spacing: 1.5px;
+  /* letter-spacing: 1.5px; */
   /* align-content: right; */
-  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+
+  font-size: 20px;
   text-align: center;
-  margin-left: 5;
+  margin-left: 10;
   margin-right: 5;
 }
 .navButton:hover {
-  background-color: red;
-  font-weight: bold;
+  color: red;
 }
 .backButton {
   position: relative;
@@ -88,7 +88,7 @@ header > .logo {
 }
 
 header > p {
-  font-family: cursive, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: whitesmoke;
   font-size: 50px;
 }
@@ -188,4 +188,27 @@ a.instagram {
   top: 0;
   position: flex;
   object-fit: contain;
+}
+
+.columnImage {
+  margin: 0;
+  /* display: flex; */
+  object-fit: contain;
+  width: 90%;
+}
+.aboutHeader {
+  text-align: center;
+  background-color: rgb(160, 159, 159);
+  margin: 5px;
+}
+.column {
+  padding-top: 30px;
+  float: left;
+  border-style: double;
+  width: 33.33%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
