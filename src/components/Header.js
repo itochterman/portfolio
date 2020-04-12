@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <div>
       <header>
-        <NavBar />
+        <NavBar buttonBold={props.buttonBold} />
         {/* <img className="logo" src={arr[0]} /> */}
         <p>{props.title}</p>
         <img className="Rose" src={Rose} />

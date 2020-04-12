@@ -118,7 +118,7 @@ class Poems extends React.Component {
     console.log(this.state.currPoem);
     return (
       <div>
-        <Header title="Poems" />
+        <Header title="Poems" page="about" />
         <div style={{ textAlign: "center", padding: "10px" }}>
           <button className="backButton" onClick={this.handleBackward}>
             Back

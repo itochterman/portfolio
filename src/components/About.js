@@ -7,7 +7,7 @@ class About extends React.Component {
   render() {
     return (
       <div>
-        <Header title="About Me" />
+        <Header title="About Me" buttonBold="Home" />
         <div className="row">
           <div className="column">
             <h2 className="aboutHeader">Education</h2>

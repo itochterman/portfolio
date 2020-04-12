@@ -1,20 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 function NavBar(props) {
-  console.log(props);
+  if (props) {
+    console.log("PROPS", props);
+  }
   return (
     <div className=" Bar">
-      <Link to="/">
-        <button className="navButton">Home</button>
+      <Link to="/" className="navButton">
+        {/* <button className="navButton">Home</button> */}
+        Home
       </Link>
-      <Link to="/about">
-        <button className="navButton">About</button>
+      <Link to="/about" className="navButton">
+        {/* <button className="navButton">About</button> */}
+        About
       </Link>
-      <Link to="/tech">
-        <button className="navButton">Tech</button>
+      <Link to="/mypoems" className="navButton">
+        {/* <button className="navButton">Poems</button> */}
+        Poems
       </Link>
-      <Link to="/mypoems">
-        <button className="navButton">Poems</button>
+      <Link to="/contact" className="navButton">
+        {/* <button className="navButton">Tech</button> */}
+        Contact
       </Link>
     </div>
   );
