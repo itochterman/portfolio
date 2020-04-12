@@ -4,18 +4,18 @@ function NavBar(props) {
   console.log(props);
   return (
     <div className=" Bar">
-      <button className="navButton">
-        <Link to="/">Home </Link>
-      </button>
-      <button className="navButton">
-        <Link to="/about">About </Link>
-      </button>
-      <button className="navButton">
-        <Link to="/tech">Tech </Link>
-      </button>
-      <button className="navButton">
-        <Link to="/mypoems">Poems </Link>
-      </button>
+      <Link to="/">
+        <button className="navButton">Home</button>
+      </Link>
+      <Link to="/about">
+        <button className="navButton">About</button>
+      </Link>
+      <Link to="/tech">
+        <button className="navButton">Tech</button>
+      </Link>
+      <Link to="/mypoems">
+        <button className="navButton">Poems</button>
+      </Link>
     </div>
   );
 }
