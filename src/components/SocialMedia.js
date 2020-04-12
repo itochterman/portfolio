@@ -16,14 +16,20 @@ class SocialMedia extends Component {
   render() {
     return (
       <div className="social-container">
-        <a href="https://www.facebook.com" className="social linkedIn">
+        <a
+          href="https://www.linkedin.com/in/isabella-tochterman-486739132/"
+          className="social linkedIn"
+        >
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
-        <a href="https://www.facebook.com" className="social facebook">
+        <a
+          href="https://www.facebook.com/isabella.tochterman"
+          className="social facebook"
+        >
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
         <a
-          href="https://www.youtube.com/c/jamesqquick"
+          href="https://www.instagram.com/portabellamush/"
           className="social instagram"
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />

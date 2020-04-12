@@ -8,7 +8,24 @@ class About extends React.Component {
     return (
       <div>
         <Header title="About Me" />
-        I'm about!
+        <div className="row">
+          <div className="column">
+            <h2 className="aboutHeader">Education</h2>
+            <ul>
+              <li style={{ fontWeight: "bolder" }}> New York University</li>
+            </ul>
+          </div>
+          <div className="column">
+            <h2 className="aboutHeader"> Personal Projects</h2>
+            <ul>
+              <li style={{ fontWeight: "bolder" }}> New York University</li>
+            </ul>
+          </div>
+          <div className="column">
+            <h2 className="aboutHeader">Professional Experience</h2>
+            <p>Some text..</p>
+          </div>
+        </div>
       </div>
     );
   }
