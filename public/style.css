@@ -51,16 +51,7 @@ header {
   text-align: right; */
 }
 .navButton {
-  /* height: 35px;
-  width: 80px;
-  background-color: grey;
-  color: white;
-  border-radius: 6px;
-  font-family: VT323, monospace;
-  /* letter-spacing: 1.5px; */
-  /* align-content: right; */
   font-family: "Courier New", Courier, monospace;
-
   font-size: 20px;
   text-align: center;
   margin-left: 10;
@@ -72,6 +63,8 @@ header {
 .backButton {
   position: relative;
   color: white;
+  width: 75px;
+  height: auto;
   background-color: black;
   border-radius: 6px;
   font-family: VT323, monospace;
@@ -80,7 +73,31 @@ header {
   margin-right: 5px;
   margin-left: 3px;
 }
+.form-container {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+}
 
+.contactForm {
+  padding: 10px;
+  text-align: center;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  font-size: 15px;
+}
+label {
+  display: inline-block;
+  /* float: left; */
+  clear: left;
+  width: 75px;
+  text-align: left;
+}
+input {
+  display: inline-block;
+  /* float: left; */
+}
 header > .logo {
   height: 80%;
   border-radius: 6px;
@@ -142,6 +159,7 @@ a {
   background-color: white;
   border: none;
 }
+
 .poemContainer > .div1 {
   text-align: center;
   font-family: VT323, monospace;
