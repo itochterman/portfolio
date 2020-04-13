@@ -1,34 +1,31 @@
-import http from '../http-header.js'
+import http from "../http-header.js";
 
-class PoemDataService{
+class PoemDataService {
+  getAll() {
+    return http.get("/Poems");
+  }
 
-    getAll(){
-        return http.get("/poems")
-    }
+  get(id) {
+    return http.get("/Poems/${id}");
+  }
 
-    get(id){
-        return http.get('/poems/${id}')
-    }
+  create(data) {
+    return http.post("/Poems", data);
+  }
+  update(id, data) {
+    return http.put(`/Poems/${id}`, data);
+  }
 
-    create(data){
-        return http.post("/poems", data)
-    }
-    update(id, data) {
-        return http.put(`/poems/${id}`, data);
-    }
-    
-    delete(id) {
-        return http.delete(`/poems/${id}`);
-    }
-    
-    deleteAll() {
-        return http.delete(`/poems`);
-    }
-    
-    findByTitle(title) {
-        return http.get(`/poems?title=${title}`);
-    }
+  delete(id) {
+    return http.delete(`/Poems/${id}`);
+  }
 
+  deleteAll() {
+    return http.delete(`/Poems`);
+  }
+
+  findByTitle(title) {
+    return http.get(`/Poems?title=${title}`);
+  }
 }
-    export default new PoemDataService()
-
+export default new PoemDataService();

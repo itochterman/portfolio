@@ -1,23 +1,29 @@
-import React from "react"
-import {Link} from "react-router-dom"
-function NavBar() {
-    return (
-        <div className="Bar">
-            <button>
-                <Link to="/">Home </Link>
-            </button>
-            <button>
-                <Link to="/about">About </Link>
-            </button>
-            <button>
-                <Link to="/tech">Tech </Link>
-            </button>
-            <button>
-                <Link to="/poems">Poems </Link>
-
-            </button>
-        </div>
-    )
+import React from "react";
+import { Link } from "react-router-dom";
+function NavBar(props) {
+  if (props) {
+    console.log("PROPS", props);
+  }
+  return (
+    <div className=" Bar">
+      <Link to="/" className="navButton">
+        {/* <button className="navButton">Home</button> */}
+        Home
+      </Link>
+      <Link to="/about" className="navButton">
+        {/* <button className="navButton">About</button> */}
+        About
+      </Link>
+      <Link to="/mypoems" className="navButton">
+        {/* <button className="navButton">Poems</button> */}
+        Poems
+      </Link>
+      <Link to="/contact" className="navButton">
+        {/* <button className="navButton">Tech</button> */}
+        Contact
+      </Link>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;
