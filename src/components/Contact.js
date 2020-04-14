@@ -22,7 +22,7 @@ class Contact extends React.Component {
     let tag = "";
     axios({
       method: "POST",
-      url: "http://localhost:8080/send",
+      url: "http://104.248.10.249:80/send",
       data: {
         firstName: firstName,
         lastName: lastName,
