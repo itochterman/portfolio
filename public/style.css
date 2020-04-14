@@ -204,13 +204,14 @@ a.instagram {
   width: 100%;
   top: 0;
   position: flex;
-  object-fit: contain;
+  height: 100%;
+  /* object-fit: contain; */
 }
 
 .columnImage {
   border-radius: 2%;
-  margin-left: 25%;
-  margin-top: 1%;
+  margin-left: 33%;
+  margin-top: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 50%;
   height: auto;
@@ -228,10 +229,32 @@ a.instagram {
 .aboutContainer {
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-top: 3%;
+  margin-top: 5%;
   margin-left: 25%;
   border-radius: 2%;
   background-color: white;
   text-align: center;
   width: 100%;
+}
+.linkBox {
+  margin-left: 33.3%;
+  box-shadow: 0 4px 8px 0 rgba(252, 252, 252, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50%;
+  border-radius: 5%;
+  height: auto;
+  background-color: grey;
+  /* text-align: center; */
+  padding: 12px;
+}
+.linkTitle {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.githubLogo {
+  padding-bottom: 0;
+  margin-right: 3%;
+  height: 30px;
+  width: auto;
 }
