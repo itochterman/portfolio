@@ -72,7 +72,7 @@ class Contact extends React.Component {
               id="firstName"
               name="firstName"
               className="input"
-              defaultValue="First Name"
+              placeholder="First Name"
             ></input>
             <br />
             <br />
@@ -81,7 +81,7 @@ class Contact extends React.Component {
               type="text"
               id="lastName"
               name="lastName"
-              defaultValue="Last Name"
+              placeholder="Last Name"
             ></input>
             <br />
             <br />
@@ -90,7 +90,7 @@ class Contact extends React.Component {
               type="email"
               id="email"
               name="email"
-              defaultValue="Email"
+              placeholder="Email"
             ></input>
             <br /> <br />
             <textarea
