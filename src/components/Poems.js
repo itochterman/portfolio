@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import Header from "./Header";
 import ChildPoems from "./ChildPoems";
 import PoemDataService from "../services/poem.service";
+import SocialMedia from "./SocialMedia";
 
 class Poems extends React.Component {
   constructor() {
@@ -131,6 +132,7 @@ class Poems extends React.Component {
         </div>
 
         {!sendProps && <ChildPoems current={this.state.currPoem} />}
+        <SocialMedia />
       </div>
     );
   }
