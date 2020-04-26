@@ -161,7 +161,7 @@ a {
 .poemContainer {
   display: absolute;
   border-radius: 2%;
-  width: 80%;
+  width: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(197, 76, 221, 0.19);
   margin-left: auto;
