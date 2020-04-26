@@ -21,14 +21,10 @@ class Poems extends React.Component {
       currPoem: [],
     };
     this.handleForward = this.handleForward.bind(this);
-    this.handleBackward = this.hadnleBackward.bind(this);
+    this.handleBackward = this.handleBackward.bind(this);
   }
   async componentWillMount() {
     const all = await this.displayPoems();
-    // console.log("STATE:", this.state.all[this.state.counter]);
-    // const link = this.state.all[this.state.counter].description;
-    // this.readTextFile(link);
-    // const state = this.readTextFile(all);
     this.setState({ all: this.readTextFile(all) });
     if (this.state.all) {
       this.setState({
@@ -74,15 +70,6 @@ class Poems extends React.Component {
     return rval;
   };
 
-  // async addPoem(data) {
-  //   const { title, description } = data;
-  //   const resp = await PoemDataService.create({
-  //     title: title,
-  //     description: description
-  //   });
-  //   console.log(resp);
-  // }
-
   async displayPoems() {
     const data = await PoemDataService.getAll().then((response) => {
       return response.data;
@@ -104,7 +91,7 @@ class Poems extends React.Component {
       });
     }
   }
-  hadnleBackward() {
+  handleBackward() {
     if (this.state.counter - 1 >= 0 && !this.state.isLoading) {
       this.setState((prev) => {
         return {
