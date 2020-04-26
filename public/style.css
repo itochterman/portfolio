@@ -4,7 +4,18 @@
 
 body {
   margin: 0;
-  background-color: rgb(231, 244, 250);
+  background-color: rgb(94, 104, 109);
+  /* position: absolute;
+  top: 0;
+  bottom: 20px;
+  width: 100%; */
+}
+
+.mainbody {
+  position: absolute;
+  top: 40px; /* Header Height */
+  bottom: 20px; /* Footer Height */
+  width: 100%;
 }
 
 header {
@@ -150,27 +161,30 @@ a {
 
 .poemContainer {
   display: absolute;
-  padding: 20px;
   border-radius: 2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 500px;
+  width: 100vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(197, 76, 221, 0.19);
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   background-color: white;
-  border: none;
+  padding-bottom: 10%;
+  /* border: none; */
 }
 
 .poemContainer > .div1 {
   text-align: center;
   font-family: VT323, monospace;
+  padding-top: 5%;
   font-size: 25px;
   color: black;
 }
 .poemContainer > .poemTextContainer {
-  height: 100%;
-  border: none;
-  overflow: scroll;
-  text-align: left;
+  height: 50vh;
+
+  padding-left: 3%;
+  overflow-y: scroll;
 }
 .social-container {
   display: flex;
@@ -212,9 +226,10 @@ a.instagram {
   border-radius: 2%;
   margin-left: 33%;
   margin-top: 5%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 20px 20px 20px rgba(165, 28, 131, 0.2);
+  /* 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   width: 50%;
-  height: auto;
+  /* height: auto; */s
 }
 .column {
   float: right;
@@ -228,24 +243,50 @@ a.instagram {
 
 .aboutContainer {
   padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 10px 20px 10px rgba(86, 228, 228, 0.2);
+  /* 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  bottom: 0px;
   margin-top: 5%;
   margin-left: 25%;
   border-radius: 2%;
-  background-color: white;
+  border-width: 2%;
+  border-style: solid;
+  background-color: rgb(235, 235, 235);
   text-align: center;
   width: 100%;
 }
-.linkBox {
+.linkBoxLeft {
   margin-left: 33.3%;
-  box-shadow: 0 4px 8px 0 rgba(252, 252, 252, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: solid;
+  border-radius: 2%;
+  margin-top: 3%;
+  box-shadow: 0px 5px 5px 0 rgba(216, 86, 228, 0.2);
+  /* 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   width: 50%;
   border-radius: 5%;
-  height: auto;
+  /* height: auto; */
   background-color: grey;
   /* text-align: center; */
   padding: 12px;
+  -ms-transform: rotate(5deg); /* IE 9 */
+  -webkit-transform: rotate(5deg); /* Safari */
+  transform: rotate(5deg);
+}
+.linkBoxRight{
+  margin-left: 33.3%;
+  margin-top: 2%;
+  border-style: solid;
+  box-shadow: 0px 5px 5px 0 rgba(216, 86, 228, 0.2);
+  /* 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  width: 50%;
+  border-radius: 5%;
+  /* height: auto; */
+  background-color: grey;
+  /* text-align: center; */
+  padding: 12px;
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  -webkit-transform: rotate(-5deg); /* Safari */
+  transform: rotate(-5deg);
 }
 .linkTitle {
   font-weight: bolder;

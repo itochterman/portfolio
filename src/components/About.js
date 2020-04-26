@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SocialMedia from "./SocialMedia";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import ios from "../images/assets/ios_project.jpg";
 import github from "../images/assets/github.png";
+import gif from "../images/assets/githubLinks.gif";
 import hippo from "../images/assets/bitch-hippo.png";
 
 class About extends React.Component {
@@ -25,9 +27,10 @@ class About extends React.Component {
                 paddingTop: "6px",
               }}
             >
-              Github Links
+              <img src={gif}></img>
+              <br />
             </h2>
-            <p className="linkBox">
+            <p className="linkBoxLeft">
               <img className="githubLogo" src={github}></img>
               <a
                 className="linkTitle"
@@ -50,7 +53,8 @@ class About extends React.Component {
               <br />
               Please click the title to see the source code
             </p>
-            <p className="linkBox">
+
+            <p className="linkBoxRight">
               <img className="githubLogo" src={github}></img>
               <a
                 className="linkTitle"
@@ -65,7 +69,7 @@ class About extends React.Component {
               and download a single instance of the song. Check the above link
               for source code.
             </p>
-            <p className="linkBox">
+            <p className="linkBoxLeft">
               <img className="githubLogo" src={github}></img>
               <a
                 className="linkTitle"
@@ -143,12 +147,12 @@ class About extends React.Component {
                 worked on various projects that showcase an array of skills I
                 acquired through my classes. For working examples of these
                 projects, please refer to the Github links displayed on the
-                right-side panel.jgjkgfg
+                right-side panel.
               </p>
             </div>
           </div>
         </div>
-        <p>HEy</p>
+        <SocialMedia />
       </div>
     );
   }

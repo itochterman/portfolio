@@ -14,7 +14,7 @@ class ChildPoems extends Component {
     const title = this.props.current[0];
 
     return (
-      <div>
+      <div style={{ paddingBottom: "5%" }}>
         <br></br>
         <div className="poemContainer">
           <div className="div1">{title}</div>
