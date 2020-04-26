@@ -10,7 +10,6 @@ class ChildPoems extends Component {
   render() {
     const body = this.props.current;
 
-    console.log("BODY: ", body);
     const title = this.props.current[0];
 
     return (
