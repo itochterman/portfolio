@@ -3,21 +3,18 @@
 }
 
 body {
+  position: relative;
   margin: 0;
   background-color: rgb(94, 104, 109);
-  bottom: 0; 
+  padding-bottom: 5em; 
+  min-height: 100%;
+  /* padding-bottom: 75px; */
   /* position: absolute;
   top: 0;
   bottom: 20px;
   width: 100%; */
 }
 
-.mainbody {
-  position: absolute;
-  top: 40px; /* Header Height */
-  bottom: 20px; /* Footer Height */
-  width: 100%;
-}
 
 header {
   height: 150px;
@@ -189,8 +186,10 @@ a {
   overflow-y: scroll;
 }
 .social-container {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   background: #eee;
   padding: 25px 50px;
 }
