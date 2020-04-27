@@ -12,8 +12,8 @@ class Home extends React.Component {
       <div>
         {/* <div className="arrow">{arrow}</div> */}
 
-        <NavBar />
         <img className="home" src={network} />
+        <NavBar style={{ top: "0px" }} />
 
         <div className="title">Hi, I'm Isabella Tochterman</div>
         <div
