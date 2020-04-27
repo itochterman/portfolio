@@ -12,6 +12,8 @@ class ChildPoems extends Component {
 
     const title = this.props.current[0];
 
+    console.log(body);
+
     return (
       <div style={{ paddingBottom: "5%" }}>
         <br></br>
@@ -20,8 +22,8 @@ class ChildPoems extends Component {
           <br></br>
           <div className="poemTextContainer">
             <div className="poemText">
-              {body.map((text) => (
-                <div key={text}>{text != "\n" ? text : <br />}</div>
+              {body.map((text, index) => (
+                <div key={index}>{text != "\n" ? text : <br />}</div>
               ))}{" "}
               <br></br>
             </div>

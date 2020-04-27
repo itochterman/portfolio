@@ -40,6 +40,7 @@ class Poems extends React.Component {
       const file = all[p].description;
       var rawFile = new XMLHttpRequest();
       rawFile.open("GET", file, false);
+	    console.log("RAW: ", rawFile);
       rawFile.onreadystatechange = () => {
         if (rawFile.readyState === 4) {
           if (rawFile.status === 200 || rawFile.status == 0) {
@@ -74,6 +75,7 @@ class Poems extends React.Component {
     const data = await PoemDataService.getAll().then((response) => {
       return response.data;
     });
+	console.log("DATA", data);
     // this.setState({ all: data });
     return data;
   }
