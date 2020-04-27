@@ -7,10 +7,12 @@ function Header(props) {
   return (
     <div>
       <header>
-        <NavBar buttonBold={props.buttonBold} />
+        <p>
+          {props.title} <img className="Rose" src={Rose} />{" "}
+          <NavBar buttonBold={props.buttonBold} />
+        </p>
+        {/* <img className="Rose" src={Rose} /> */}
         {/* <img className="logo" src={arr[0]} /> */}
-        <p>{props.title}</p>
-        <img className="Rose" src={Rose} />
       </header>
     </div>
   );
