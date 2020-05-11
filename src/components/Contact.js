@@ -51,7 +51,7 @@ class Contact extends React.Component {
           <Header title="Contact" />
 
           <div className="form-container">
-            <form
+            <form 
               className="contactForm"
               id="email-form"
               name="email-form"
