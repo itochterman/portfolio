@@ -24,7 +24,7 @@ class About extends React.Component {
                 marginLeft: "23.3%",
                 width: "50%",
                 textAlign: "center",
-                padding: "6px",
+                padding: "15px",
               }}
             >
               {/* <img src={gif}></img> */}

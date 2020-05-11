@@ -8,7 +8,7 @@ body {
   background-color: rgb(240, 240, 240);
   padding-bottom: 7em; 
   min-height: 100%;
-  padding-top: 100px;
+  padding-top: 15vh;
 }
 
 
@@ -18,7 +18,7 @@ header {
   width: 100%;
   text-align: center;
   padding-top: 0px;
-  height: 100px;
+  height: 15vh;
   z-index: 999;
   background: rgb(28, 29, 27); 
   background: -webkit-linear-gradient(
@@ -54,7 +54,9 @@ header {
   margin-right: 5;
 }
 .navButton:hover {
+
   color:rgb(247, 54, 198);
+
 }
 .backButton {
   position: relative;
@@ -128,10 +130,20 @@ header > .logo {
 
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(-500%);
+    transform: translateX(50%);
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(-500%);
+    width: 2%;
+  }
+  100% {
+    transform: translateX(0);
+    width: 50%;
   }
 }
 
@@ -211,6 +223,7 @@ a.twitter {
 a.instagram {
   color: rgb(218, 47, 114);
 }
+
 .home {
   width: 100%;
   top: 0;
@@ -247,7 +260,7 @@ a.instagram {
   margin-top: 5%;
   margin-left: 25%;
   border-radius: 10px;
-  border-style: solid;
+  /* border-style: solid; */
   background-color:white;
   text-align: center;
   width: 85%;
@@ -256,6 +269,7 @@ a.instagram {
   margin-left: 23.3%;
   border-style: solid;
   border-radius: 10px;
+  border-width: thin;
   margin-top: 3%;
   box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
@@ -269,6 +283,7 @@ a.instagram {
   margin-left: 23.3%;
   margin-top: 2%;
   border-style: solid;
+  border-width: thin;
   /* box-shadow: 0px 5px 5px 0 rgba(216, 86, 228, 0.2); */
   box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
