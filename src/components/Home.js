@@ -18,12 +18,11 @@ class Home extends React.Component {
         <div className="title">Hi, I'm Isabella Tochterman</div>
         <div
           className="title"
-          style={{ top: "50%", fontSize: "25px", color: "red" }}
+          style={{ top: "45%", fontSize: "25px", color: "rgb(218, 47, 114)" }}
         >
           I'm an aspiring web developer
         </div>
 
-        {/* <MemeGenerator /> */}
         <SocialMedia />
       </div>
     );

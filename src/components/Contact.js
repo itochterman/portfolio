@@ -51,7 +51,7 @@ class Contact extends React.Component {
           <Header title="Contact" />
 
           <div className="form-container">
-            <form 
+            <form
               className="contactForm"
               id="email-form"
               name="email-form"
@@ -62,7 +62,7 @@ class Contact extends React.Component {
                 type="text"
                 id="firstName"
                 name="firstName"
-                className="input"
+                className="textInput"
                 placeholder="First Name"
               ></input>
               <br />
@@ -72,6 +72,7 @@ class Contact extends React.Component {
                 type="text"
                 id="lastName"
                 name="lastName"
+                className="textInput"
                 placeholder="Last Name"
               ></input>
               <br />
@@ -80,6 +81,7 @@ class Contact extends React.Component {
               <input
                 type="email"
                 id="email"
+                className="textInput"
                 name="email"
                 placeholder="Email"
               ></input>
@@ -88,7 +90,12 @@ class Contact extends React.Component {
                 type="text"
                 id="body"
                 name="body"
-                style={{ width: "500px", height: "300px" }}
+                style={{
+                  width: "500px",
+                  border: "1px solid rgb(218, 47, 114)",
+                  height: "300px",
+                  borderStyle: "thick",
+                }}
               ></textarea>
               <br />
               <br />
@@ -109,7 +116,7 @@ class Contact extends React.Component {
                   type="submit"
                   value="Submit"
                   className="backButton"
-                  style={{ marginTop: "0", textAlign: "center" }}
+                  // style={{ marginTop: "0", textAlign: "center" }}
                 ></input>
               </div>
             </form>
