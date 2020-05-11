@@ -85,7 +85,7 @@ class About extends React.Component {
               <img className="githubLogo" src={github}></img>
               <a
                 className="linkTitle"
-                href="https://github.com/itochterman/StreetJammin"
+                href="https://github.com/itochterman/text_analysis"
               >
                 Chat History Analysis
               </a>

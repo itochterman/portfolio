@@ -20,16 +20,16 @@ header {
   padding-top: 0px;
   height: 15vh;
   z-index: 999;
-  background: rgb(28, 29, 27); 
+  background: rgb(100, 100, 100); 
   background: -webkit-linear-gradient(
     to right,
-    #4f4e50,
-    rgb(10, 10, 10)
+    rgb(220, 220, 220),
+    rgb(100, 100, 100)
   );
   background: linear-gradient(
     to right,
-    rgb(30, 45, 53),
-    rgb(7, 14, 24)
+    rgb(150,150, 150),
+    rgb(100, 100, 100) 
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 @keyframes slideInFromLeft {
@@ -60,16 +60,17 @@ header {
 }
 .backButton {
   position: relative;
+  margin: 10px;
   color: white;
-  width: 75px;
-  height: auto;
-  background-color: black;
+  width: 100px;
+  text-align: center;
+  height: 25px;
+  background-color:  rgb(218, 47, 114);
   border-radius: 6px;
   font-family: VT323, monospace;
   letter-spacing: 1.5px;
   margin-top: 20;
-  margin-right: 5px;
-  margin-left: 3px;
+
 }
 .form-container {
   padding-top: 5%;
@@ -82,11 +83,13 @@ header {
   padding: 10px;
   text-align: center;
   border-radius: 2%;
+  border: 2px;
+  color: rgb(218, 47, 114);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgb(255, 255, 255);
   font-size: 15px;
 }
-input {
+.textInput {
     padding-right: 50px;
     background: transparent;
     border: none;
@@ -111,6 +114,11 @@ header > .logo {
 .papi {
   font-family: "Courier New", Courier, monospace;
   color: whitesmoke;
+  
+  text-shadow: -1px 1px 0  rgb(218, 47, 114),
+				  1px 1px 0 rgb(218, 47, 114),
+				 1px -1px 0  rgb(218, 47, 114),
+				-1px -1px 0  rgb(218, 47, 114);
   margin-top: 35px;
   font-size: 45px;
 }
@@ -153,7 +161,7 @@ header > .logo {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 50px;
-  top: 40%;
+  top: 35%;
   left: 50%;
   margin-left: -350px;
 
@@ -168,8 +176,8 @@ a {
 .poemContainer {
   display: absolute;
   width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(197, 76, 221, 0.19);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -273,7 +281,7 @@ a.instagram {
   margin-top: 3%;
   box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
-  background-color: grey;
+  background-color: rgb(200, 200, 200);
   padding: 12px;
   -ms-transform: rotate(5deg); /* IE 9 */
   -webkit-transform: rotate(5deg); /* Safari */
