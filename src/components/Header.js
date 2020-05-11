@@ -12,7 +12,11 @@ function Header(props) {
         </p>
         {/* <img className="Rose" src={Rose} /> */}
         <NavBar buttonBold={props.buttonBold} />
-        {/* <img className="logo" src={arr[0]} /> */}
+        {/* <div
+          style={{ left: "5%", top: "65px", position: "fixed", color: "pink" }}
+        >
+          @portabellamush
+        </div> */}
       </header>
     </div>
   );
