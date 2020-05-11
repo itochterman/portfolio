@@ -21,13 +21,14 @@ class About extends React.Component {
             {/* <div className="linkBox"> */}
             <h2
               style={{
-                marginLeft: "33.3%",
+                marginLeft: "23.3%",
                 width: "50%",
                 textAlign: "center",
-                paddingTop: "6px",
+                padding: "15px",
               }}
             >
-              <img src={gif}></img>
+              {/* <img src={gif}></img> */}
+              Project Github Links
               <br />
             </h2>
             <p className="linkBoxLeft">
@@ -42,8 +43,8 @@ class About extends React.Component {
                 <img
                   src={hippo}
                   style={{
-                    width: "80%",
-                    marginLeft: "10%",
+                    width: "25%",
+                    marginLeft: "35%",
                     position: "flex",
                     paddingTop: "10px",
                     height: "auto%",
@@ -62,12 +63,8 @@ class About extends React.Component {
               >
                 StreetJammin: A Repository for Street Performers
               </a>
-              <br /> <br />
-              StreetJammin is a site built using Django (Python web framework)
-              with Bootstrap using a SqLite database that takes in a user's song
-              and links it to unique QR codes such that a user can scan the code
-              and download a single instance of the song. Check the above link
-              for source code.
+              <br /> <br />A repository for street performers built with Django
+              and Bootstrap and backed by a SqLite database.
             </p>
             <p className="linkBoxLeft">
               <img className="githubLogo" src={github}></img>
@@ -78,15 +75,24 @@ class About extends React.Component {
                 Github Repo for present site...
                 <br /> <br />
               </a>
-              As you have seen, the present site is also a project I've
-              completed. I've created this site independently using a stack of
-              ReactJS, expressJS with MySQL, and vanilla CSS. No bootstrap
-              libraries were used in the making of this site. As is to be
-              expected, this site is a work in progress. I plan to focus on
-              mobile integration and further front-end development in the near
-              future. I've had a blast building the site, and I hope that
-              experience is apparent in the result. Click the above link to view
-              code!
+              This portoflio was built using Express.js, React, and vanilla CSS
+              attached to a MySQL instance serving up my poems. Instead of
+              building a one-page, homogenous portfolio, I opted to build a
+              full-stack web application.
+            </p>
+
+            <p className="linkBoxRight">
+              <img className="githubLogo" src={github}></img>
+              <a
+                className="linkTitle"
+                href="https://github.com/itochterman/StreetJammin"
+              >
+                Chat History Analysis
+              </a>
+              <br /> <br />A web tool that analyzes iMessage history for various
+              parameters such as message count, word frequency, and sentiment.
+              Built with Django and SqLite with analysis tools from Pandas and
+              SciPy.
             </p>
           </div>
 
