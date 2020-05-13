@@ -22,9 +22,10 @@ class ChildPoems extends Component {
           <br></br>
           <div className="poemTextContainer">
             <div className="poemText">
-              {body.map((text, index) => (
+              {/* {body.map((text, index) => (
                 <div key={index}>{text != "\n" ? text : <br />}</div>
-              ))}{" "}
+              ))}{" "} */}
+              <pre>{body}</pre>
               <br></br>
             </div>
           </div>
