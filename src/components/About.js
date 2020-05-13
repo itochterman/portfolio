@@ -101,20 +101,21 @@ class About extends React.Component {
               <h2>About me</h2>
               <h3>~</h3>
               <p style={{ textAlign: "left" }}>
-                Hi, I'm Isabella Tochterman. I didn't originally plan to enjoy
-                Web Development, but it crept up on me like an itchy foot.
+                Hi, I'm Isabella Tochterman. When I started out as a Psychology
+                major, I didn't originally plan on pursuing Computer Science.
+                However, after discovering my love for statistics, I found
+                myself in an intro programming class. The rest is history.
                 <br /> <br />
-                During my experience at New York University, I was exposed to
-                all the working parts of computers, as well as the different
-                levels of software that keep our computers operating at a ground
-                levels and the user-level applications we stringently rely on in
-                order to conduct our daily lives.
+                During my experience as a CS major at NYU, I was exposed to all
+                the working parts of computers, as well as the different levels
+                of software that keep our computers operating at both kernel and
+                user levels.
                 <br /> <br />
                 As a Computer Science & Psychology dual degree with a minor in
                 Creative Writing, I naturally found myself drifting towards the
                 interaction between visualization and logic that is so apparent
                 in web applications. I am excited by the way in which seasoned
-                web pages can entice and seduce a viewer.
+                web pages can both entice and seduce a viewer.
                 <p style={{ fontWeight: "bolder" }}>
                   TLDR: I'm anxious to continue learning all I can about the
                   tenets of web development and how to best produce webpages
@@ -151,9 +152,9 @@ class About extends React.Component {
               <p style={{ textAlign: "left" }}>
                 Throughout the duration of my Computer Science degree at NYU, I
                 worked on various projects that showcase an array of skills I
-                acquired through my classes. For working examples of these
-                projects, please refer to the Github links displayed on the
-                right-side panel.
+                acquired through my classes. I've alsofurther explored these
+                tools through a couple of personal projects, including this
+                site. You'll find links to a few of these projects to the right.
               </p>
             </div>
           </div>
