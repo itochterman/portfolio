@@ -141,8 +141,8 @@ class About extends React.Component {
                 <h5 style={{ textAlign: "center" }}> Mantra Health </h5>
                 <br />
                 During the last four months of 2019, I worked as a full stack
-                development intern with responsibilites of adding and updating
-                GraphQL endpoints to the Postgres database, enhancing and
+                development intern with responsibilities such as adding and updating
+                GraphQL endpoints for our Postgres database, enhancing and
                 maintaining front end patient and provider portals using
                 ReactJS, HTML and CSS, all while communicating and collaborating
                 with a small engineering team through Agile practices.
@@ -151,8 +151,8 @@ class About extends React.Component {
               <h3>~</h3>
               <p style={{ textAlign: "left" }}>
                 Throughout the duration of my Computer Science degree at NYU, I
-                worked on various projects that showcase an array of skills I
-                acquired through my classes. I've alsofurther explored these
+                worked on various projects that showcase the array of skills I
+                acquired through my classes. I've also further explored these
                 tools through a couple of personal projects, including this
                 site. You'll find links to a few of these projects to the right.
               </p>
